@@ -3,11 +3,20 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import AutoImport from "astro-auto-import";
-import { defineConfig, squooshImageService } from "astro/config";
+import { defineConfig } from "astro/config";
 import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
 import config from "./src/config/config.json";
+import languagesJSON from "./src/config/language.json";
 const { default_language } = config.settings;
+
+const supportedLang = [...languagesJSON.map((lang) => lang.languageCode)];
+const disabledLanguages = config.settings.disable_languages;
+
+// Filter out disabled languages from supportedLang
+const filteredSupportedLang = supportedLang.filter(
+  (lang) => !disabledLanguages.includes(lang),
+);
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,11 +24,17 @@ export default defineConfig({
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "ignore",
   i18n: {
-    locales: [default_language], // Beibehaltung von i18n, nur Standard-Sprache
+    locales: filteredSupportedLang,
     defaultLocale: default_language,
   },
   image: {
-    service: squooshImageService(),
+    service: {
+      // Verwende den Standard Sharp-Bilddienst
+      name: 'sharp',
+      options: {
+        // Hier kannst du spezifische Optionen für Sharp hinzufügen, falls erforderlich
+      },
+    },
   },
   integrations: [
     react(),

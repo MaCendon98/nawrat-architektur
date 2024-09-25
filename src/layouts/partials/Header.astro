@@ -1,6 +1,6 @@
 ---
 import Logo from "@/components/Logo.astro";
-import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
+// import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
 import config from "@/config/config.json";
 import LanguageSwitcher from "@/helpers/LanguageSwitcher";
 import {
@@ -111,10 +111,10 @@ if (disabledLanguages.includes(lang)) {
         navigation_button.enable && (
           <li class="mt-4 inline-block lg:hidden">
             <a
-              class="btn btn-outline-primary btn-sm"
+              class="btn btn-primary btn-sm"
               href={navigation_button.link}
             >
-              {get_started}
+              {navigation_button.label}
             </a>
           </li>
         )
@@ -143,10 +143,10 @@ if (disabledLanguages.includes(lang)) {
       {
         navigation_button.enable && (
           <a
-            class="btn btn-outline-primary btn-sm hidden lg:inline-block"
+            class="btn btn-primary hidden lg:inline-block"
             href={navigation_button.link}
           >
-            {get_started}
+            {navigation_button.label}
           </a>
         )
       }

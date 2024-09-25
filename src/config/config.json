@@ -5,7 +5,7 @@
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
+    "logo": "/images/logo.svg",
     "logo_width": "150",
     "logo_height": "30",
     "logo_text": "Logo Nawrat"
@@ -30,8 +30,8 @@
 
   "navigation_button": {
     "enable": true,
-    "label": "Get Started",
-    "link": "https://github.com/zeon-studio/astroplate"
+    "label": "RUFEN SIE UNS AN",
+    "link": "tel:123456789"
   },
 
   "disqus": {

@@ -6,7 +6,7 @@ import { supportedLang } from "@/lib/utils/languageParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
 import Testimonial from "@/partials/Testimonial.astro";
-import type { Feature } from "@/types";
+import type { Feature, About } from "@/types";
 import type { ContentEntryMap } from "astro:content";
 import { FaCheck } from "react-icons/fa";
 
@@ -19,7 +19,7 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 const homepage = await getListPage("homepage", lang as keyof ContentEntryMap);
-const { banner, features } = homepage[0].data;
+const { banner, features, abouts } = homepage[0].data;
 
 const testimonial = await getSinglePage(
   "sections",
@@ -39,7 +39,7 @@ const call_to_action = await getSinglePage(
   <section class="section pt-14">
     <div class="container">
       <div class="row justify-center">
-        <div class="lg:col-7 md:col-9 mb-8 text-center">
+        <div class="lg:col-10 md:col-9 mb-8 text-center">
           <h1
             set:html={markdownify(banner.title)}
             class="mb-4 text-h3 lg:text-h1"
@@ -118,6 +118,32 @@ const call_to_action = await getSinglePage(
     ))
   }
   <!-- /Features -->
+
+  <!-- About -->
+  {
+    abouts.map((about: About, index: number) => (
+    <section class="section-sm bg-gradient">
+      <div class="container">
+        <div class="row items-center justify-between">
+          <div class="mb:md-0 mb-6 md:col-5">
+            {/* <ImageMod
+              src={abouts.image}
+              height={480}
+              width={520}
+              alt={about.title} 
+              format="webp"
+            /> */}
+          </div>
+          <div class="md:col-7 lg:col-6">
+            <h2 class="mb-4">{markdownify(about.title)}</h2>
+            <p class="mb-8 text-lg">{markdownify(about.content)}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    ))
+}
+  <!-- /About -->
 
   <Testimonial testimonial={testimonial[0]} />
   <CallToAction call_to_action={call_to_action[0]} />

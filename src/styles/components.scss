@@ -1,4 +1,4 @@
-// section style
+ /* section style */
 .section {
   @apply py-24 xl:py-28;
   &-sm {
@@ -6,12 +6,12 @@
   }
 }
 
-// container
+/* container */
 .container {
   @apply mx-auto max-w-[1320px] px-4;
 }
 
-// form style
+/* form style */
 .form-input {
   @apply w-full rounded border-transparent bg-theme-light px-6 py-4 text-dark placeholder:text-light focus:border-primary focus:ring-transparent;
 }
@@ -20,7 +20,7 @@
   @apply mb-4 block font-primary text-xl font-normal text-dark;
 }
 
-// social icons
+/* social icons */
 .social-icons {
   @apply space-x-4;
   li {
@@ -34,7 +34,7 @@
   }
 }
 
-// notice
+/* notice */
 .notice {
   @apply mb-6 rounded-lg border px-8 py-6;
   &-head {
@@ -74,7 +74,7 @@
   }
 }
 
-// swiper pagination
+/* swiper pagination */
 .testimonial-slider-pagination {
   .swiper-pagination-bullet {
     @apply h-2.5 w-2.5 bg-theme-light opacity-100;
@@ -85,7 +85,7 @@
   }
 }
 
-// tab
+/* tab */
 .tab {
   @apply overflow-hidden rounded-lg border border-border;
   &-nav {
@@ -116,7 +116,7 @@
   }
 }
 
-// accordion
+/* accordion */
 .accordion {
   @apply mb-6 overflow-hidden rounded-lg border border-border bg-theme-light;
   &-header {
@@ -138,7 +138,7 @@
   }
 }
 
-// modal
+/* modal */
 .modal {
   @apply fixed inset-0 z-40 hidden h-full w-full overflow-auto;
   &-overlay {
@@ -152,7 +152,7 @@
   }
 }
 
-// content style
+/* content style */
 .content {
   @apply prose max-w-none;
   @apply prose-headings:mb-[.3em] prose-headings:mt-[.6em] prose-headings:text-dark;

@@ -8,6 +8,14 @@ export type Feature = {
   title: string;
 };
 
+export type About = {
+  button: button;
+  image: string;
+  bulletpoints: string[];
+  content: string;
+  title: string;
+};
+
 export type Button = {
   enable: boolean;
   label: string;
