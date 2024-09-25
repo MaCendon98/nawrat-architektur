@@ -6,6 +6,13 @@ const JSON_FOLDER = "./.json";
 const CONTENT_ROOT = "src/content";
 const CONTENT_DEPTH = 3;
 
+// Prüfen, ob das Verzeichnis existiert
+const contentDir = path.join(__dirname, 'src/content/content');
+if (!fs.existsSync(contentDir)) {
+  console.log('Verzeichnis "src/content/content" existiert nicht. Überspringe diesen Schritt.');
+  process.exit(0); // Beendet das Skript frühzeitig, falls das Verzeichnis fehlt
+}
+
 // get data from markdown
 const getData = (folder, groupDepth) => {
   const dir = path.join(CONTENT_ROOT, folder);
