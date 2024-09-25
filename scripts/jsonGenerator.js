@@ -6,13 +6,6 @@ const JSON_FOLDER = "./.json";
 const CONTENT_ROOT = "src/content";
 const CONTENT_DEPTH = 3;
 
-// Prüfen, ob das Verzeichnis existiert
-const contentDir = path.join(__dirname, 'src/content/content');
-if (!fs.existsSync(contentDir)) {
-  console.log('Verzeichnis "src/content/content" existiert nicht. Überspringe diesen Schritt.');
-  process.exit(0); // Beendet das Skript frühzeitig, falls das Verzeichnis fehlt
-}
-
 // get data from markdown
 const getData = (folder, groupDepth) => {
   const dir = path.join(CONTENT_ROOT, folder);
@@ -64,16 +57,21 @@ try {
     fs.mkdirSync(JSON_FOLDER);
   }
 
-  // create json files
-  fs.writeFileSync(
-    `${JSON_FOLDER}/content.json`,
-    JSON.stringify(getData("content", 3)),
-  );
+  if (fs.existsSync(path.join(CONTENT_ROOT, 'content'))) {
+    // create json files
+    fs.writeFileSync(
+      `${JSON_FOLDER}/content.json`,
+      JSON.stringify(getData("content", 3)),
+    );
 
-  // merge json files for search
-  const content = require(`../${JSON_FOLDER}/content.json`);
-  const search = [...content];
-  fs.writeFileSync(`${JSON_FOLDER}/search.json`, JSON.stringify(search));
+    // merge json files for search
+    const content = require(`../${JSON_FOLDER}/content.json`);
+    const search = [...content];
+    fs.writeFileSync(`${JSON_FOLDER}/search.json`, JSON.stringify(search));
+  } else {
+    console.log('Verzeichnis "src/content/content" existiert nicht. Erstelle eine leere search.json.');
+    fs.writeFileSync(`${JSON_FOLDER}/search.json`, JSON.stringify([])); // Leere JSON-Datei erstellen
+  }
 } catch (err) {
   console.error(err);
 }
