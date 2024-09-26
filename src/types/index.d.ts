@@ -9,10 +9,12 @@ export type Feature = {
 };
 
 export type About = {
+  tagline: string;
   button: button;
   image: string;
   bulletpoints: string[];
-  content: string;
+  content1: string;
+  content2: string;
   title: string;
 };
 

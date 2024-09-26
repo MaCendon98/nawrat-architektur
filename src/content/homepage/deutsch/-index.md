@@ -6,21 +6,30 @@ banner:
   image: "/images/banner.jpg"
   button:
     enable: false
-    label: "Get Started For Free"
-    link: "https://github.com/zeon-studio/astroplate"
+    label: "Button"
+    link: "#"
 
 # Features
 features:
-  - title: "What's Included in Astroplate"
-    image: "/images/service-1.png"
-    content: "Astroplate is a comprehensive starter template that includes everything you need to get started with your Astro project. What's Included in Astroplate"
-    bulletpoints:
-      - "10+ Pre-build pages"
-      - "95+ Google Pagespeed Score"
-      - "Build with Astro and TailwindCSS for easy and customizable styling"
-      - "Fully responsive on all devices"
-      - "SEO-optimized for better search engine rankings"
-      - "**Open-source and free** for personal and commercial use"
+  - title: "Gebäude- & Innenarchitektur"
+    image: "/images/icon1.svg"
+    content: "Von der Konzeptentwicklung bis hin zur Detailplanung – wir gestalten Räume, die nicht nur funktional, sondern auch ästhetisch ansprechend sind. Wir arbeiten Hand in Hand, um Ihre Vision Wirklichkeit werden zu lassen."
+    button:
+      enable: false
+      label: "Get Started Now"
+      link: "#"
+      
+  - title: "Gebäuderenovierung"
+    image: "/images/icon2.svg"
+    content: "Ob historische Gebäude oder moderne Wohnhäuser – wir bringen neues Leben in Ihre vier Wände. Mit unserer Expertise in Renovierung und Sanierung erhalten Sie maß-geschneiderte Lösungen, die Alt und Neu perfekt verbinden."
+    button:
+      enable: false
+      label: "Get Started Now"
+      link: "#"
+
+  - title: "Bauprojektmanagement"
+    image: "/images/icon3.svg"
+    content: "Effizientes Bauprojektmanagement von A bis Z: Wir koordinieren alle Prozesse, von der Planung bis zur Fertigstellung, und sorgen dafür, dass Ihr Projekt termingerecht und im Budgetrahmen realisiert wird."
     button:
       enable: false
       label: "Get Started Now"
@@ -28,8 +37,14 @@ features:
 
 # About
 abouts:
-  - title: "About"
-    image: "/images/service-1.png"
-    content: "Astroplate is a comprehensive starter template that includes everything you need to get started with your Astro project. What's Included in Astroplate"
+  - tagline: "Über uns"
+    title: "Wir machen Ihre Wohnträume wahr."
+    image: "/images/about-visual.png"
+    content1: "Als Architekturbüro mit Leidenschaft für außergewöhnliche Projekte begleiten wir Sie auf dem Weg zu Ihrem Traumhaus. Von der ersten Idee bis zur Schlüsselübergabe – wir setzen Ihre Wünsche in die Realität um."
+    content2: "Unsere Architekturprojekte stehen für Individualität, Funktionalität und Ästhetik. Mit einem erfahrenen Team gestalten wir einzigartige Lebensräume, die perfekt zu Ihnen passen."
+    button:
+      enable: true
+      label: "Unsere Visitenkarte von 2010"
+      link: "/images/visitenkarte.png"
 
 ---
