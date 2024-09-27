@@ -1,10 +1,10 @@
 ---
 enable: true
-title: "Ready to build your next project with Astro?"
+title: "Sie wollen ein Projekt mit uns starten?"
 image: "/images/call-to-action.png"
-description: "Experience the future of web development with Astroplate and Astro. Build lightning-fast static sites with ease and flexibility."
+description: "Dann rufen Sie uns an oder schicken Sie uns eine Nachricht. Wir freuen uns auf Sie!"
 button:
   enable: true
-  label: "Get Started Now"
-  link: "https://github.com/zeon-studio/astroplate"
+  label: "Rufen Sie uns an"
+  link: "tel:051134088350"
 ---

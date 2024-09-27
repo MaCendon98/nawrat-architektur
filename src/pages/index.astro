@@ -36,13 +36,13 @@ const call_to_action = await getSinglePage(
 
 <Base>
   <!-- Banner -->
-  <section class="section pt-28">
+  <section class="section pt-34">
     <div class="container">
       <div class="row justify-center">
         <div class="lg:col-10 md:col-9 mb-20 text-center">
           <h1
             set:html={markdownify(banner.title)}
-            class="mb-4 text-h3 lg:text-h1"
+            class="mb-4 md:text-h1 text-h2"
           />
           <p set:html={markdownify(banner.content)} class="mb-8 text-lg" />
           {
@@ -146,7 +146,6 @@ const call_to_action = await getSinglePage(
   </section>
   <!-- /Features -->
   
-
-  <Testimonial testimonial={testimonial[0]} />
   <CallToAction call_to_action={call_to_action[0]} />
+  <Testimonial testimonial={testimonial[0]} />
 </Base>
