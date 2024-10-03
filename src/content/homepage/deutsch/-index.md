@@ -2,7 +2,7 @@
 # Banner
 banner:
   title: "Architektur mit Seele und Charakter."
-  content: "Mit einer Leidenschaft für Details und einem Fokus auf Nachhaltigkeit erschaffen wir Architektur, die inspiriert. Von der ersten Skizze bis zur Fertigstellung – wir begleiten Sie auf jedem Schritt."
+  content: "Mit einer Leidenschaft für Details und einem Fokus auf Nachhaltigkeit erschaffen wir Architektur, die inspiriert.<br>Von der ersten Skizze bis zur Fertigstellung – wir begleiten Sie auf jedem Schritt."
   image: "/images/banner.jpg"
   button:
     enable: false

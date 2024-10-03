@@ -5,6 +5,7 @@ import { getListPage, getSinglePage } from "@/lib/contentParser.astro";
 import { supportedLang } from "@/lib/utils/languageParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
+import Contact from "@/partials/Contact.astro";
 import Testimonial from "@/partials/Testimonial.astro";
 import type { Feature, About } from "@/types";
 import type { ContentEntryMap } from "astro:content";
@@ -32,19 +33,26 @@ const call_to_action = await getSinglePage(
   lang as keyof ContentEntryMap,
   "call-to-action",
 );
+
+const contact = await getSinglePage(
+  "sections",
+  lang as keyof ContentEntryMap,
+  "contact"
+);
+
 ---
 
 <Base>
   <!-- Banner -->
-  <section class="section pt-34">
+  <section class="section lg:pt-32">
     <div class="container">
       <div class="row justify-center">
-        <div class="lg:col-10 md:col-9 mb-20 text-center">
+        <div class="mb-10 md:mb-20 text-left">
           <h1
             set:html={markdownify(banner.title)}
-            class="mb-4 md:text-h1 text-h2"
+            class="mb-6 lg:text-6xl text-4xl text-left"
           />
-          <p set:html={markdownify(banner.content)} class="mb-8 text-lg" />
+          <p set:html={markdownify(banner.content)} class="mb-8 text-lg lg:text-xl text-left" />
           {
             banner.button.enable && (
               <a
@@ -62,7 +70,7 @@ const call_to_action = await getSinglePage(
         </div>
         {
           banner.image && (
-            <div class="col-12">
+            <div class="col-12 p-0">
               <ImageMod
                 src={banner.image}
                 height={380}
@@ -81,7 +89,7 @@ const call_to_action = await getSinglePage(
   <!-- About -->
   {
     abouts.map((about: About, index: number) => (
-    <section class="section-sm">
+    <section class="section-sm" id="about">
       <div class="container">
         <div class="row items-center justify-between">
           <div class="md:col-7 lg:col-6">
@@ -148,4 +156,5 @@ const call_to_action = await getSinglePage(
   
   <CallToAction call_to_action={call_to_action[0]} />
   <Testimonial testimonial={testimonial[0]} />
+  <Contact contact={contact[0]} />
 </Base>

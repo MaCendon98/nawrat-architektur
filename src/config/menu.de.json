@@ -1,20 +1,13 @@
 {
   "main": [
     { "name": "Home", "url": "/" },
-    { "name": "About", "url": "/about" },
-    { "name": "Elements", "url": "/elements" },
-    {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        { "name": "Contact", "url": "/contact" },
-        { "name": "404 Page", "url": "/404" }
-      ]
-    }
+    { "name": "Über uns", "url": "#about" },
+    { "name": "Referenzen", "url": "#references" },
+    { "name": "Kontakt", "url": "#contact" }
   ],
   "footer": [
-    { "name": "Elements", "url": "/elements" },
-    { "name": "Privacy Policy", "url": "/privacy-policy" }
+    { "name": "Impressum", "url": "/elements" },
+    { "name": "Datenschutz", "url": "#" },
+    { "name": "Impressum", "url": "/privacy-policy" }
   ]
 }
