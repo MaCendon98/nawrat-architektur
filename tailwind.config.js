@@ -9,12 +9,9 @@ let h3 = h4 * font_scale;
 let h2 = h3 * font_scale;
 let h1 = h2 * font_scale;
 
-let fontPrimaryType, fontSecondaryType;
+let fontPrimaryType;
 if (theme.fonts.font_family.primary) {
   fontPrimaryType = theme.fonts.font_family.primary_type;
-}
-if (theme.fonts.font_family.secondary) {
-  fontSecondaryType = theme.fonts.font_family.secondary_type;
 }
 
 /** @type {import('tailwindcss').Config} */
@@ -62,7 +59,6 @@ module.exports = {
       },
       fontFamily: {
         primary: ["var(--font-primary)", fontPrimaryType],
-        secondary: ["var(--font-secondary)", fontSecondaryType],
       },
     },
   },
