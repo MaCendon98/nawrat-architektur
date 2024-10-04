@@ -13,7 +13,7 @@ const { contact } = Astro.props;
                 set:html={markdownify(contact.data.tagline)}
                 class="mb-10 text-sm text-primary font-semibold uppercase"
             />
-          <div class="flex flex-col lg:flex-row gap-8 lg:justify-between">
+          <div class="flex flex-col lg:flex-row gap-16 lg:justify-between">
             <div class="">
                 <h2
                     set:html={markdownify(contact.data.title)}
@@ -27,7 +27,7 @@ const { contact } = Astro.props;
                     {contact.data.button.label}
                     </a>
               )}
-              <div class="flex gap-10 mt-14">
+              <div class="flex gap-10 mt-14 flex-col lg:flex-row">
                 <div class="flex gap-4 items-center">
                     <div class="size-16 rounded-full overflow-hidden">
                         <ImageMod
@@ -47,12 +47,12 @@ const { contact } = Astro.props;
                 <div class="flex gap-4 items-center">
                     <div class="size-16 rounded-full overflow-hidden">
                         <ImageMod
-                        src={contact.data.image2}
-                        height={400}
-                        width={400}
-                        alt={contact.data.name2}
-                        format="jpeg"
-                        class="object-cover h-full"
+                            src={contact.data.image2}
+                            height={400}
+                            width={400}
+                            alt={contact.data.name2}
+                            format="webp"
+                            class="object-cover h-full"
                         />
                     </div>
                     <div class="flex flex-col">

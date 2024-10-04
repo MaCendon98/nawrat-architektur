@@ -9,15 +9,15 @@ const { call_to_action } = Astro.props;
     <section class="section-sm">
       <div class="container">
         <div class="px-0 py-8 border-t border-b">
-          <div class="flex flex-col lg:flex-row gap-8 lg:justify-between items-center">
+          <div class="flex flex-col lg:flex-row gap-8 lg:justify-between">
             <div class="">
               <h2
                 set:html={markdownify(call_to_action.data.title)}
-                class="mb-2 text-3xl text-center lg:text-left"
+                class="mb-2 text-3xl"
               />
               <p
                 set:html={markdownify(call_to_action.data.description)}
-                class="mb-0 text-center lg:text-left"
+                class="mb-0"
               />
             </div>
             <div class="">

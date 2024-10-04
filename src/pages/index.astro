@@ -92,7 +92,7 @@ const contact = await getSinglePage(
     <section class="section-sm" id="about">
       <div class="container">
         <div class="row items-center justify-between">
-          <div class="md:col-7 lg:col-6">
+          <div class="md:col-7 lg:col-6 mb-20 md:mb-0">
             <p class="mb-6 text-sm text-primary font-semibold uppercase">{markdownify(about.tagline)}</p>
             <h2 class="mb-6">{markdownify(about.title)}</h2>
             <p class="mb-4">{markdownify(about.content1)}</p>
@@ -125,16 +125,16 @@ const contact = await getSinglePage(
     <div class="flex flex-col lg:flex-row gap-8">
       {
         features.map((feature: Feature, index: number) => (
-          <div class="flex flex-col flex-1 p-10 border">
+          <div class="flex flex-col flex-1 p-6 lg:p-10 border">
             <div
-              class="size-12 mb-10"
+              class="size-12 mb-6 lg:mb-10"
             >
               <ImageMod
                 src={feature.image}
                 height={40}
                 width={40}
                 alt={feature.title}
-                format="webp"
+                format="svg"
               />
             </div>
             <div class="">
