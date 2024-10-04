@@ -14,7 +14,7 @@ const { testimonial } = Astro.props;
             <h2 set:html={markdownify(testimonial.data.title)} class="mb-4" />
           </div>
           <div class="col-12">
-            <div class="swiper testimonial-slider overflow-visible">
+            <div class="swiper testimonial-slider">
               <div class="swiper-wrapper">
                 {testimonial.data.testimonials.map(
                   (item: {
