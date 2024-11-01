@@ -85,6 +85,11 @@
   }
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  top: auto !important; /* Top-Positionierung deaktivieren */
+}
+
 /* tab */
 .tab {
   @apply overflow-hidden rounded-lg border border-border;

@@ -9,7 +9,6 @@ import Contact from "@/partials/Contact.astro";
 import Testimonial from "@/partials/Testimonial.astro";
 import type { Feature, About } from "@/types";
 import type { ContentEntryMap } from "astro:content";
-import { FaCheck } from "react-icons/fa";
 
 export function getStaticPaths() {
   const paths = supportedLang.map((lang) => ({
@@ -104,13 +103,40 @@ const contact = await getSinglePage(
               )}
           </div>
           <div class="mb:md-0 mb-6 md:col-5">
-            <ImageMod
-              src={about.image}
-              height={1000}
-              width={800}
-              alt={about.title} 
-              format="png"
-            />
+            <div class="flex gap-10 mt-14 flex-col lg:flex-row">
+                <div class="flex gap-4 flex-col">
+                    <div class="h-60 w-40 rounded-lg overflow-hidden">
+                        <ImageMod
+                        src={about.image1}
+                        height={400}
+                        width={400}
+                        alt={about.name1}
+                        format="jpeg"
+                        class="object-cover h-full"
+                        />
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="mb-1 text-left text-sm font-medium" set:html={markdownify(about.name1)} />
+                        <p class="mb-0 text-left text-sm font-light" set:html={markdownify(about.detail1)} />
+                    </div>
+                </div>
+                <div class="flex gap-4 flex-col">
+                    <div class="h-60 w-40 rounded-lg overflow-hidden">
+                        <ImageMod
+                            src={about.image1}
+                            height={400}
+                            width={400}
+                            alt={about.name2}
+                            format="webp"
+                            class="object-cover h-full"
+                        />
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="mb-1 text-left text-sm font-medium" set:html={markdownify(about.name2)} />
+                        <p class="mb-0 text-left text-sm font-light" set:html={markdownify(about.detail2)} />
+                    </div>
+                </div>
+              </div>
           </div>
         </div>
       </div>
@@ -154,7 +180,7 @@ const contact = await getSinglePage(
   </section>
   <!-- /Features -->
   
-  <CallToAction call_to_action={call_to_action[0]} />
+  <!-- <CallToAction call_to_action={call_to_action[0]} /> -->
   <Testimonial testimonial={testimonial[0]} />
   <Contact contact={contact[0]} />
 </Base>

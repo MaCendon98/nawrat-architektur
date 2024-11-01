@@ -30,8 +30,8 @@
 
   "navigation_button": {
     "enable": true,
-    "label": "Rufen Sie uns an",
-    "link": "tel:051134088350"
+    "label": "Kontaktieren Sie uns",
+    "link": "#contact"
   },
 
   "disqus": {

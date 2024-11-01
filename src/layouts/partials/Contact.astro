@@ -19,6 +19,8 @@ const { contact } = Astro.props;
                     set:html={markdownify(contact.data.title)}
                     class="mb-6 text-4xl"
                 />
+                <p set:html={markdownify(contact.data.description)}
+                    class="mb-6" />
                 {contact.data.button.enable && (
                     <a
                     class="btn btn-primary"
@@ -29,35 +31,21 @@ const { contact } = Astro.props;
               )}
               <div class="flex gap-10 mt-14 flex-col lg:flex-row">
                 <div class="flex gap-4 items-center">
-                    <div class="size-16 rounded-full overflow-hidden">
-                        <ImageMod
-                        src={contact.data.image1}
-                        height={400}
-                        width={400}
-                        alt={contact.data.name1}
-                        format="jpeg"
-                        class="object-cover h-full"
+                    <div class="mb-8">
+                        <p class="mb-2 text-sm font-normal">E-Mail</p>
+                        <p
+                            set:html={markdownify(contact.data.email)}
+                            class="mb-0 text-left text-primary text-2xl"
                         />
-                    </div>
-                    <div class="flex flex-col">
-                        <p class="mb-1 text-left text-sm font-medium" set:html={markdownify(contact.data.name1)} />
-                        <p class="mb-0 text-left text-sm font-light" set:html={markdownify(contact.data.detail1)} />
                     </div>
                 </div>
                 <div class="flex gap-4 items-center">
-                    <div class="size-16 rounded-full overflow-hidden">
-                        <ImageMod
-                            src={contact.data.image2}
-                            height={400}
-                            width={400}
-                            alt={contact.data.name2}
-                            format="webp"
-                            class="object-cover h-full"
+                    <div class="mb-8">
+                        <p class="mb-2 text-sm font-normal">Telefonnummer</p>
+                        <p
+                            set:html={markdownify(contact.data.phone)}
+                            class="mb-0 text-left text-primary text-2xl"
                         />
-                    </div>
-                    <div class="flex flex-col">
-                        <p class="mb-1 text-left text-sm font-medium" set:html={markdownify(contact.data.name2)} />
-                        <p class="mb-0 text-left text-sm font-light" set:html={markdownify(contact.data.detail2)} />
                     </div>
                 </div>
               </div>
@@ -69,9 +57,9 @@ const { contact } = Astro.props;
                         set:html={markdownify(contact.data.adress)}
                         class="mb-2 text-left text-sm"
                     />
-                    {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.064614465541!2d9.743160076679287!3d52.36924837202205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b074b461c63d3b%3A0xe1006f9831891deb!2sMarienstra%C3%9Fe%209-11%2C%2030171%20Hannover!5e0!3m2!1sde!2sde!4v1727967078643!5m2!1sde!2sde" width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.064614465541!2d9.743160076679287!3d52.36924837202205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b074b461c63d3b%3A0xe1006f9831891deb!2sMarienstra%C3%9Fe%209-11%2C%2030171%20Hannover!5e0!3m2!1sde!2sde!4v1727967078643!5m2!1sde!2sde" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="mb-8">
+                {/* <div class="mb-8">
                     <p class="mb-2 text-sm font-normal">E-Mail</p>
                     <p
                         set:html={markdownify(contact.data.email)}
@@ -84,7 +72,7 @@ const { contact } = Astro.props;
                         set:html={markdownify(contact.data.phone)}
                         class="mb-0 text-left text-primary text-2xl"
                     />  
-                </div>
+                </div> */}
             </div>
           </div>
         </div>

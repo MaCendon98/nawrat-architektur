@@ -1,13 +1,12 @@
 {
   "main": [
-    { "name": "Home", "url": "/" },
+    { "name": "Startseite", "url": "/" },
     { "name": "Über uns", "url": "#about" },
     { "name": "Referenzen", "url": "#references" },
     { "name": "Kontakt", "url": "#contact" }
   ],
   "footer": [
-    { "name": "Impressum", "url": "/elements" },
-    { "name": "Datenschutz", "url": "#" },
-    { "name": "Impressum", "url": "/privacy-policy" }
+    { "name": "Datenschutz", "url": "/datenschutz" },
+    { "name": "Impressum", "url": "/impressum" }
   ]
 }
