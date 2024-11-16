@@ -67,7 +67,7 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("tailwind-bootstrap-grid")({
       generateContainer: false,
-      gridGutterWidth: "4rem",
+      gridGutterWidth: "0rem",
       gridGutters: {
         1: "0.25rem",
         2: "0.5rem",

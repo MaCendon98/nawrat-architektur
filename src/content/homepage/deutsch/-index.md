@@ -42,7 +42,7 @@ abouts:
     image: "/images/about-visual.png"
     content1: "Als Architekturbüro mit Leidenschaft für außergewöhnliche Projekte begleiten wir Sie auf dem Weg zu Ihrem Traumhaus. Von der ersten Idee bis zur Schlüsselübergabe – wir setzen Ihre Wünsche in die Realität um."
     content2: "Unsere Architekturprojekte stehen für Individualität, Funktionalität und Ästhetik. Mit einem erfahrenen Team gestalten wir einzigartige Lebensräume, die perfekt zu Ihnen passen."
-    image1: "/images/banner.jpg"
+    image1: "/images/michael_nawrat.png"
     image2: "/images/banner.jpg"
     name1: "Michael Nawrat"
     name2: "Oliver Nawrat"
