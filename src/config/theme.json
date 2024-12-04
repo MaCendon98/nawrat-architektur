@@ -3,7 +3,7 @@
     "default": {
       "theme_color": {
         "primary": "#996830",
-        "body": "#FAF5EF",
+        "body": "#ece9e6",
         "border": "#E6D8CC",
         "theme_light": "#f6f6f6",
         "theme_dark": ""
@@ -17,7 +17,7 @@
   },
   "fonts": {
     "font_family": {
-      "primary": "Outfit:wght@300;400;500;600",
+      "primary": "Merriweather:wght@300;400;700;900",
       "primary_type": "sans-serif"
     },
     "font_size": { "base": "18", "scale": "1.2" }

@@ -1,6 +1,38 @@
-@font-face {
+/* @font-face {
     font-family: 'Outfit';
     src: url('/fonts/Outfit-VariableFont_wght.ttf') format('ttf');
     font-weight: 100 900;
-  }
+  } */
+
+/* Merriweather Light */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300; /* Light */
+  src: local('Merriweather Light'), url('/fonts/Merriweather-Light.ttf') format('truetype');
+}
   
+/* Merriweather Regular */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400; /* Regular */
+  src: local('Merriweather Regular'), url('/fonts/Merriweather-Regular.ttf') format('truetype');
+}
+
+/* Merriweather Bold */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700; /* Bold */
+  src: local('Merriweather Bold'), url('/fonts/Merriweather-Bold.ttf') format('truetype');
+}
+
+  /* Merriweather Black */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 900; /* Black */
+  src: local('Merriweather Black'), url('/fonts/Merriweather-Black.ttf') format('truetype');
+}
+

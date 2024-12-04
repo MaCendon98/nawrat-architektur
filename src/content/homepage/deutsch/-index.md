@@ -46,8 +46,8 @@ abouts:
     image2: "/images/banner.jpg"
     name1: "Michael Nawrat"
     name2: "Oliver Nawrat"
-    detail1: "Architekt seit 20XY"
-    detail2: "Architekt seit 20XY"
+    detail1: "Architekt seit 2001"
+    detail2: "Bachelor of Art 2023"
     button:
       enable: true
       label: "Unsere Visitenkarte von 2010"
