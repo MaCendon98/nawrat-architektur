@@ -85,6 +85,16 @@
   }
 }
 
+:root {
+  --swiper-navigation-size: 25px; /* Standardgröße für die Navigation */
+}
+
+.testimonial-slider .swiper-button-next,
+.testimonial-slider .swiper-button-prev {
+  --swiper-navigation-size: 30px; /* Größe der Navigationspfeile für diesen Slider */
+  @apply text-primary;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   top: auto !important; /* Top-Positionierung deaktivieren */

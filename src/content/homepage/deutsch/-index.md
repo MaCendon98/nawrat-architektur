@@ -19,17 +19,17 @@ features:
       label: "Get Started Now"
       link: "#"
       
-  - title: "Gebäuderenovierung"
+  - title: "Bestandsaufnahmen"
     image: "/images/icon2.svg"
-    content: "Ob historische Gebäude oder moderne Wohnhäuser – wir bringen neues Leben in Ihre vier Wände. Mit unserer Expertise in Renovierung und Sanierung erhalten Sie maß-geschneiderte Lösungen, die Alt und Neu perfekt verbinden."
+    content: "Von der Bestandsaufnahme bis zur fertigen Umsetzung – Ihr Partner für durchdachte Sanierungen. Wir begleiten Ihr Projekt in allen Leistungsphasen und verbinden Bestehendes mit innovativen Ideen"
     button:
       enable: false
       label: "Get Started Now"
       link: "#"
 
-  - title: "Bauprojektmanagement"
+  - title: "Bauleitung"
     image: "/images/icon3.svg"
-    content: "Effizientes Bauprojektmanagement von A bis Z: Wir koordinieren alle Prozesse, von der Planung bis zur Fertigstellung, und sorgen dafür, dass Ihr Projekt termingerecht und im Budgetrahmen realisiert wird."
+    content: "Mit fachlicher Kompetenz und Verantwortung übernehmen wir die Bauleitung – von der Kontrolle des Bauprozesses bis zur Koordination der Gewerke. Wir sorgen dafür, dass Termine, Kosten und Qualität bestmöglich eingehalten werden, um einen reibungslosen Ablauf und ein perfektes Ergebnis zu garantieren."
     button:
       enable: false
       label: "Get Started Now"
@@ -40,16 +40,18 @@ abouts:
   - tagline: "Über uns"
     title: "Wir machen Ihre Wohnträume wahr."
     image: "/images/about-visual.png"
-    content1: "Als Architekturbüro mit Leidenschaft für außergewöhnliche Projekte begleiten wir Sie auf dem Weg zu Ihrem Traumhaus. Von der ersten Idee bis zur Schlüsselübergabe – wir setzen Ihre Wünsche in die Realität um."
-    content2: "Unsere Architekturprojekte stehen für Individualität, Funktionalität und Ästhetik. Mit einem erfahrenen Team gestalten wir einzigartige Lebensräume, die perfekt zu Ihnen passen."
+    content1: "Wir sind ein erfahrenes Architekturbüro, das Projekte im Bestand ebenso wie Neubauten umsetzt. Von der Bestandsaufnahme bis zur Fertigstellung begleiten wir Sie durch alle Leistungsphasen und sorgen für eine reibungslose Umsetzung."
+    content2: "Mit einem Blick für Details, Funktionalität und Ausführung schaffen wir Räume, die Ihre Wünsche und Anforderungen perfekt erfüllen."
     image1: "/images/michael_nawrat.png"
-    image2: "/images/banner.jpg"
+    image2: "/images/oliver_nawrat.png"
     name1: "Michael Nawrat"
     name2: "Oliver Nawrat"
     detail1: "Architekt seit 2001"
-    detail2: "Bachelor of Art 2023"
+    detail2: "Bachelor of Arts 2023"
     button:
       enable: true
       label: "Unsere Visitenkarte von 2010"
       link: "/images/visitenkarte.png"
 ---
+
+
