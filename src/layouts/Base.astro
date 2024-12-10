@@ -141,22 +141,6 @@ const language = lang || getLangFromUrl(Astro.url);
       content={`${config.site.base_url}/${Astro.url.pathname.replace("/", "")}`}
     />
 
-    <!-- twitter-title -->
-    <meta
-      name="twitter:title"
-      content={plainify(
-        meta_title ? meta_title : title ? title : config.site.title,
-      )}
-    />
-
-    <!-- twitter-description -->
-    <meta
-      name="twitter:description"
-      content={plainify(
-        description ? description : config.metadata.meta_description,
-      )}
-    />
-
     <!-- og-image -->
     <meta
       property="og:image"
@@ -164,16 +148,17 @@ const language = lang || getLangFromUrl(Astro.url);
         image ? image : config.metadata.meta_image
       }`}
     />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2X7NRL9RME">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    <!-- twitter-image -->
-    <meta
-      name="twitter:image"
-      content={`${config.site.base_url}${
-        image ? image : config.metadata.meta_image
-      }`}
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-  </head>
+      gtag('config', 'G-2X7NRL9RME');
+    </script>
+    </head>
   <body>
     <TwSizeIndicator />
     <Header />
